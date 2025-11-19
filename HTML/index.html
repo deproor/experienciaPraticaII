@@ -1,70 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONG Amigos de Patas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ONG Amigos de Patas</title>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
-
 <body>
-    <header>
-        <h1>ONG Amigos de Patas</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-                <li><a href="doar.html">Doar</a></li>
-                <li><a href="admin.html">Admin</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <div class="brand">
+        <h1 class="brand__title">ONG Amigos de Patas</h1>
+        <span class="brand__subtitle">Cuidar. Resgatar. Adotar.</span>
+      </div>
 
-    <main>
-        <section>
-            <h2>Missão, Visão e Valores</h2>
-            <p>Promover o bem-estar, a proteção e a adoção responsável de cães em situação de vulnerabilidade.</p>
-            <ul>
-                <li><strong>Compaixão:</strong> Atuamos com empatia e respeito.</li>
-                <li><strong>Transparência:</strong> Prestamos contas com clareza.</li>
-                <li><strong>Inovação:</strong> Usamos tecnologia para ampliar impacto.</li>
-                <li><strong>Colaboração:</strong> Trabalhamos em rede com voluntários e parceiros.</li>
-            </ul>
-            <img src="../imagens/ong2.jpg" alt="Imagem representando missão da ONG" width="500" height="300">
-        </section>
+      <nav class="nav" aria-label="Navegação principal">
+        <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
+          ☰
+        </button>
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Início</a></li>
+          <li class="nav__item nav__item--has-submenu">
+            <a class="nav__link" href="projetos.html">Projetos ▾</a>
+            <div class="submenu" role="menu">
+              <a href="projetos.html#andamento">Em andamento</a>
+              <a href="projetos.html#voluntariado">Voluntariado</a>
+              <a href="projetos.html#doar">Como doar</a>
+            </div>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="cadastro.html">Cadastro</a></li>
+          <li class="nav__item"><a class="nav__link" href="doar.html">Doar</a></li>
+          <li class="nav__item"><a class="nav__link" href="admin.html">Admin</a></li>
+        </ul>
+        <div id="mobileNav" class="nav--mobile" aria-hidden="true">
+          <a class="nav__link" href="index.html">Início</a>
+          <a class="nav__link" href="projetos.html">Projetos</a>
+          <a class="nav__link" href="cadastro.html">Cadastro</a>
+          <a class="nav__link" href="doar.html">Doar</a>
+          <a class="nav__link" href="admin.html">Admin</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-        <section>
-            <h2>Histórico e Conquistas</h2>
-            <p>Desde 2017, a ONG resgatou mais de 1.000 cães e promoveu centenas de adoções responsáveis.</p>
-            <img src="../imagens/ong3.jpg" alt="Imagem de conquistas da ONG" width="400" height="500">
-        </section>
+  <main>
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero__content">
+          <h2 class="hero__title">Proteção e adoção responsável de cães</h2>
+          <p class="hero__desc">Promovemos o bem-estar, resgates e campanhas de adoção com transparência e tecnologia para ampliar impacto.</p>
+          <div class="badges">
+            <span class="badge badge--primary">Transparência</span>
+            <span class="badge badge--success">+1000 cães resgatados</span>
+            <span class="badge badge--warning">Feiras mensais</span>
+          </div>
+          <div style="margin-top: var(--space-24);">
+            <a class="btn btn--primary" href="doar.html">Quero doar</a>
+            <a class="btn btn--outline" href="cadastro.html">Quero ser voluntário</a>
+          </div>
+        </div>
+        <div class="hero__media">
+          <img src="imagens/ong2.jpg" alt="Imagem representando missão da ONG">
+        </div>
+      </div>
+    </section>
 
-        <section>
-            <h2>Blog e Atualizações</h2>
-            <article>
-                <h3>Feira de Adoção bate recorde</h3>
-                <p>Mais de 120 cães adotados em outubro. A campanha “Adote com Amor” foi um sucesso!</p>
-            </article>
-            <article>
-                <h3>Nova parceria com clínicas veterinárias</h3>
-                <p>Castração gratuita para famílias de baixa renda já está disponível em 3 bairros.</p>
-            </article>
-        </section>
+    <section class="section section--alt">
+      <div class="container grid">
+        <div class="grid-col-12">
+          <h2 class="card__title">Missão, Visão e Valores</h2>
+          <ul>
+            <li><strong>Compaixão:</strong> Atuamos com empatia e respeito.</li>
+            <li><strong>Transparência:</strong> Prestamos contas com clareza.</li>
+            <li><strong>Inovação:</strong> Usamos tecnologia para ampliar impacto.</li>
+            <li><strong>Colaboração:</strong> Trabalhamos em rede com voluntários e parceiros.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <section>
-            <h2>Contato</h2>
-            <address>
-                <p>Email: contato@amigosdepatas.org.br</p>
-                <p>Telefone: (62) 91234-5678</p>
-                <p>Endereço: Rua da Solidariedade, 123 - Aparecida de Goiânia - GO</p>
+    <section class="section">
+      <div class="container cards-grid">
+        <article class="card">
+          <div class="card__media">
+            <img src="imagens/ong3.jpg" alt="Conquistas da ONG">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Histórico e Conquistas</h3>
+            <p class="card__content">Desde 2017, resgatamos mais de 1.000 cães e promovemos centenas de adoções responsáveis.</p>
+            <div class="badges">
+              <span class="badge badge--success">Adoções</span>
+              <span class="badge badge--primary">Parcerias</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body">
+            <h3 class="card__title">Blog e Atualizações</h3>
+            <p class="card__content"><strong>Feira de Adoção bate recorde:</strong> 120 cães adotados em outubro.</p>
+            <p class="card__content"><strong>Parcerias com clínicas:</strong> Castração gratuita em 3 bairros.</p>
+            <a class="btn btn--secondary" href="projetos.html">Ver projetos</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body">
+            <h3 class="card__title">Contato</h3>
+            <address class="card__content">
+              Email: contato@amigosdepatas.org.br<br>
+              Telefone: (62) 91234-5678<br>
+              Endereço: Rua da Solidariedade, 123 - Aparecida de Goiânia - GO
             </address>
-        </section>
-    </main>
+            <a class="btn btn--outline" href="cadastro.html">Entre em contato</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 ONG Amigos de Patas</p>
-    </footer>
+    <div class="toast" aria-live="polite" aria-atomic="true"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; 2025 ONG Amigos de Patas</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
 </body>
-
 </html>
