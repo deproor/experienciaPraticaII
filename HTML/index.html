@@ -1,113 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Site Básico</title>
-    <style>
-        :root{--accent:#0066cc;--bg:#f7f9fc;--card:#ffffff}
-        *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:#111}
-        header{background:linear-gradient(90deg,rgba(0,102,204,.12),transparent);padding:1rem 1.25rem;position:sticky;top:0;backdrop-filter:saturate(120%) blur(4px)}
-        .container{max-width:900px;margin:0 auto;padding:1rem}
-        nav{display:flex;gap:1rem;align-items:center;justify-content:space-between}
-        .brand{font-weight:700;color:var(--accent)}
-        .links a{color:inherit;text-decoration:none;padding:.35rem .6rem;border-radius:.35rem}
-        .links a:hover{background:rgba(0,0,0,.04)}
-        main{padding:2rem 1.25rem}
-        .hero{background:var(--card);padding:1.5rem;border-radius:.5rem;box-shadow:0 6px 18px rgba(16,24,40,.06)}
-        .grid{display:grid;gap:1rem;margin-top:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-        .card{background:var(--card);padding:1rem;border-radius:.5rem;box-shadow:0 6px 18px rgba(16,24,40,.04)}
-        footer{padding:1rem;text-align:center;font-size:.9rem;color:#555}
-        form{display:grid;gap:.5rem}
-        input,textarea{width:100%;padding:.6rem;border:1px solid #ddd;border-radius:.35rem;font:inherit}
-        button{background:var(--accent);color:#fff;padding:.55rem .9rem;border:0;border-radius:.35rem;cursor:pointer}
-        @media (min-width:640px){header{padding:1rem 2rem}main{padding:3rem 2rem}}
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Amigos de Patas</title>
 </head>
+
 <body>
     <header>
-        <div class="container">
-            <nav>
-                <div class="brand">Meu Site</div>
-                <div class="links">
-                    <a href="#home">Início</a>
-                    <a href="#sobre">Sobre</a>
-                    <a href="#contato">Contato</a>
-                </div>
-            </nav>
-        </div>
+        <h1>ONG Amigos de Patas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="doar.html">Doar</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <section id="home" class="hero">
-            <h1>Bem-vindo ao site básico</h1>
-            <p>Exemplo simples de estrutura HTML com estilo leve. Use este arquivo como ponto de partida para seu projeto.</p>
-            <div class="grid" style="margin-top:1rem">
-                <div class="card">
-                    <h3>Rápido</h3>
-                    <p>Estrutura minimalista para desenvolvimento ágil.</p>
-                </div>
-                <div class="card">
-                    <h3>Responsivo</h3>
-                    <p>Layout que se adapta a diferentes tamanhos de tela.</p>
-                </div>
-                <div class="card">
-                    <h3>Sem dependências</h3>
-                    <p>HTML e CSS puros — fácil de entender e modificar.</p>
-                </div>
-            </div>
+    <main>
+        <section>
+            <h2>Missão, Visão e Valores</h2>
+            <p>Promover o bem-estar, a proteção e a adoção responsável de cães em situação de vulnerabilidade.</p>
+            <ul>
+                <li><strong>Compaixão:</strong> Atuamos com empatia e respeito.</li>
+                <li><strong>Transparência:</strong> Prestamos contas com clareza.</li>
+                <li><strong>Inovação:</strong> Usamos tecnologia para ampliar impacto.</li>
+                <li><strong>Colaboração:</strong> Trabalhamos em rede com voluntários e parceiros.</li>
+            </ul>
+            <img src="../imagens/ong2.jpg" alt="Imagem representando missão da ONG" width="500" height="300">
         </section>
 
-        <section id="sobre" style="margin-top:1.25rem">
-            <div class="card">
-                <h2>Sobre</h2>
-                <p>Descreva aqui o propósito do site, suas tecnologias e informações relevantes.</p>
-            </div>
+        <section>
+            <h2>Histórico e Conquistas</h2>
+            <p>Desde 2017, a ONG resgatou mais de 1.000 cães e promoveu centenas de adoções responsáveis.</p>
+            <img src="../imagens/ong3.jpg" alt="Imagem de conquistas da ONG" width="400" height="500">
         </section>
 
-        <section id="contato" style="margin-top:1.25rem">
-            <div class="card">
-                <h2>Contato</h2>
-                <form id="contactForm" onsubmit="submitForm(event)">
-                    <input type="text" id="name" name="name" placeholder="Seu nome" required />
-                    <input type="email" id="email" name="email" placeholder="Seu email" required />
-                    <textarea id="message" name="message" rows="4" placeholder="Mensagem" required></textarea>
-                    <div style="display:flex;gap:.5rem;justify-content:flex-end">
-                        <button type="submit">Enviar</button>
-                    </div>
-                    <p id="status" style="margin:0;font-size:.9rem;color:green;display:none">Mensagem enviada (simulada).</p>
-                </form>
-            </div>
+        <section>
+            <h2>Blog e Atualizações</h2>
+            <article>
+                <h3>Feira de Adoção bate recorde</h3>
+                <p>Mais de 120 cães adotados em outubro. A campanha “Adote com Amor” foi um sucesso!</p>
+            </article>
+            <article>
+                <h3>Nova parceria com clínicas veterinárias</h3>
+                <p>Castração gratuita para famílias de baixa renda já está disponível em 3 bairros.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Contato</h2>
+            <address>
+                <p>Email: contato@amigosdepatas.org.br</p>
+                <p>Telefone: (62) 91234-5678</p>
+                <p>Endereço: Rua da Solidariedade, 123 - Aparecida de Goiânia - GO</p>
+            </address>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <small>© <span id="year"></span> Meu Site — Feito com HTML e CSS</small>
-        </div>
+        <p>&copy; 2025 ONG Amigos de Patas</p>
     </footer>
-
-    <script>
-        // pequenos comportamentos: ano dinâmico e envio simulado
-        document.getElementById('year').textContent = new Date().getFullYear();
-        function submitForm(e){
-            e.preventDefault();
-            const status = document.getElementById('status');
-            status.style.display = 'block';
-            // simula envio e limpa o formulário após 1s
-            setTimeout(()=>{
-                e.target.reset();
-                status.style.display = 'none';
-            },1000);
-        }
-        // link âncora com scroll suave
-        document.querySelectorAll('a[href^="#"]').forEach(a=>{
-            a.addEventListener('click', e=>{
-                e.preventDefault();
-                const target = document.querySelector(a.getAttribute('href'));
-                if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
-            });
-        });
-    </script>
 </body>
+
 </html>
