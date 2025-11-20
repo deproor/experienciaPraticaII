@@ -4,167 +4,79 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Administração da ONG</title>
-  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="../css/styles.css"/>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-wrap">
-      <div class="brand">
-        <h1 class="brand__title">Área Administrativa</h1>
-        <span class="brand__subtitle">Gestão e transparência</span>
-      </div>
-      <nav class="nav" aria-label="Navegação principal">
-        <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>☰</button>
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="index.html">Início</a></li>
-          <li class="nav__item"><a class="nav__link" href="projetos.html">Projetos</a></li>
-          <li class="nav__item"><a class="nav__link" href="cadastro.html">Cadastro</a></li>
-          <li class="nav__item"><a class="nav__link" href="doar.html">Doar</a></li>
-          <li class="nav__item"><a class="nav__link" href="admin.html">Admin</a></li>
-        </ul>
-        <div id="mobileNav" class="nav--mobile" aria-hidden="true">
-          <a class="nav__link" href="index.html">Início</a>
-          <a class="nav__link" href="projetos.html">Projetos</a>
-          <a class="nav__link" href="cadastro.html">Cadastro</a>
-          <a class="nav__link" href="doar.html">Doar</a>
-          <a class="nav__link" href="admin.html">Admin</a>
-        </div>
-      </nav>
+  <header class="cabecalho">
+    <div class="cabecalho-conteudo container">
+      <h1 class="logo">Área Administrativa</h1>
+      <ul class="menu-principal">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="doar.html">Doar</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
     </div>
   </header>
 
-  <main class="container section">
-    <section class="section--alt">
-      <h2 class="card__title">Gerenciar Informações Institucionais</h2>
+  <main class="container secao">
+    <section class="secao">
+      <h2 class="titulo-secao">Gerenciar Informações Institucionais</h2>
       <p>Atualize missão, visão, valores, equipe e histórico da organização.</p>
-      <button class="btn btn--primary" data-modal-open="modalEditarInfo">Editar Informações</button>
+      <button class="botao botao-principal">Editar Informações</button>
     </section>
 
-    <section class="section">
-      <h2 class="card__title">Cadastro e Edição de Projetos</h2>
-      <p>Adicione novos projetos, edite conteúdos e atualize indicadores de impacto.</p>
-      <div class="kpis">
-        <div class="kpi">
-          <div class="kpi__value">12</div>
-          <div class="kpi__label">Projetos ativos</div>
+    <section class="secao">
+      <h2 class="titulo-secao">Cadastro e Edição de Projetos</h2>
+      <p>Adicione novos projetos sociais, edite conteúdos e atualize indicadores de impacto.</p>
+
+      <div class="lista-indicadores">
+        <div class="indicador">
+          <div class="indicador-valor">12</div>
+          <div class="indicador-legenda">Projetos ativos</div>
         </div>
-        <div class="kpi">
-          <div class="kpi__value">248</div>
-          <div class="kpi__label">Voluntários</div>
+        <div class="indicador">
+          <div class="indicador-valor">248</div>
+          <div class="indicador-legenda">Voluntários</div>
         </div>
-        <div class="kpi">
-          <div class="kpi__value">R$ 87.450</div>
-          <div class="kpi__label">Doações em 2025</div>
+        <div class="indicador">
+          <div class="indicador-valor">R$ 87.450</div>
+          <div class="indicador-legenda">Doações em 2025</div>
         </div>
-        <div class="kpi">
-          <div class="kpi__value">98%</div>
-          <div class="kpi__label">Satisfação</div>
+        <div class="indicador">
+          <div class="indicador-valor">98%</div>
+          <div class="indicador-legenda">Satisfação</div>
         </div>
       </div>
-      <div style="margin-top: var(--space-24); display:flex; gap: var(--space-16);">
-        <button class="btn btn--secondary" data-modal-open="modalCadastrarProjeto">Cadastrar Projeto</button>
-        <button class="btn btn--outline" data-modal-open="modalEditarProjetos">Editar Projetos Existentes</button>
+
+      <div class="acoes-admin">
+        <button class="botao botao-secundario">Cadastrar Projeto</button>
+        <button class="botao botao-outline">Editar Projetos Existentes</button>
       </div>
     </section>
 
-    <section class="section section--alt">
-      <h2 class="card__title">Voluntários e Doações</h2>
+    <section class="secao">
+      <h2 class="titulo-secao">Voluntários e Doações</h2>
       <p>Acompanhe inscrições de voluntários, histórico de participação e valores arrecadados.</p>
-      <div style="display:flex; gap: var(--space-16);">
-        <button class="btn btn--primary" data-modal-open="modalVoluntarios">Ver Lista de Voluntários</button>
-        <button class="btn btn--outline" data-modal-open="modalDoacoes">Ver Histórico de Doações</button>
+      <div class="acoes-admin">
+        <button class="botao botao-principal">Ver Lista de Voluntários</button>
+        <button class="botao botao-outline">Ver Histórico de Doações</button>
       </div>
     </section>
 
-    <section class="section">
-      <h2 class="card__title">Relatórios e Transparência</h2>
+    <section class="secao">
+      <h2 class="titulo-secao">Relatórios e Transparência</h2>
       <p>Envie documentos públicos, relatórios financeiros e atualizações para o blog institucional.</p>
-      <div style="display:flex; gap: var(--space-16);">
-        <button class="btn btn--primary" data-modal-open="modalPublicarRelatorio">Publicar Relatório</button>
-        <button class="btn btn--outline" data-modal-open="modalBlog">Gerenciar Blog</button>
+      <div class="acoes-admin">
+        <button class="botao botao-principal">Publicar Relatório</button>
+        <button class="botao botao-outline">Gerenciar Blog</button>
       </div>
     </section>
-
-    <!-- Modais de Admin (exemplos) -->
-    <div id="modalEditarInfo" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalEditarInfoTitle">
-      <div class="modal__dialog">
-        <div class="modal__header">
-          <h3 id="modalEditarInfoTitle" class="modal__title">Editar Informações Institucionais</h3>
-          <button class="modal__close" data-modal-close aria-label="Fechar">&times;</button>
-        </div>
-        <p>Formulário para atualizar missão, visão, valores e equipe.</p>
-      </div>
-    </div>
-
-    <div id="modalCadastrarProjeto" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalCadastrarProjetoTitle">
-      <div class="modal__dialog">
-        <div class="modal__header">
-          <h3 id="modalCadastrarProjetoTitle" class="modal__title">Cadastrar Projeto</h3>
-          <button class="modal__close" data-modal-close aria-label="Fechar">&times;</button>
-        </div>
-        <p>Form de cadastro de projeto com indicadores.</p>
-      </div>
-    </div>
-
-    <div id="modalEditarProjetos" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalEditarProjetosTitle">
-      <div class="modal__dialog">
-        <div class="modal__header">
-          <h3 id="modalEditarProjetosTitle" class="modal__title">Editar Projetos</h3>
-          <button class="modal__close" data-modal-close aria-label="Fechar">&times;</button>
-        </div>
-        <p>Lista de projetos para edição.</p>
-      </div>
-    </div>
-
-    <div id="modalVoluntarios" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalVoluntariosTitle">
-      <div class="modal__dialog">
-        <div class="modal__header">
-          <h3 id="modalVoluntariosTitle" class="modal__title">Voluntários</h3>
-          <button class="modal__close" data-modal-close aria-label="Fechar">&times;</button>
-        </div>
-        <p>Tabela de voluntários cadastrados.</p>
-      </div>
-    </div>
-
-    <div id="modalDoacoes" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalDoacoesTitle">
-      <div class="modal__dialog">
-        <div class="modal__header">
-          <h3 id="modalDoacoesTitle" class="modal__title">Histórico de Doações</h3>
-          <button class="modal__close" data-modal-close aria-label="Fechar">&times;</button>
-        </div>
-        <p>Relatório de doações por período.</p>
-      </div>
-    </div>
-
-    <div id="modalPublicarRelatorio" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalPublicarRelatorioTitle">
-      <div class="modal__dialog">
-        <div class="modal__header">
-          <h3 id="modalPublicarRelatorioTitle" class="modal__title">Publicar Relatório</h3>
-          <button class="modal__close" data-modal-close aria-label="Fechar">&times;</button>
-        </div>
-        <p>Upload e publicação de documentos públicos.</p>
-      </div>
-    </div>
-
-    <div id="modalBlog" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalBlogTitle">
-      <div class="modal__dialog">
-        <div class="modal__header">
-          <h3 id="modalBlogTitle" class="modal__title">Gerenciar Blog</h3>
-          <button class="modal__close" data-modal-close aria-label="Fechar">&times;</button>
-        </div>
-        <p>Editor simples de posts e atualizações.</p>
-      </div>
-    </div>
-
-    <div class="toast" aria-live="polite" aria-atomic="true"></div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p>&copy; 2025 ONG Amigos de Patas</p>
-    </div>
+  <footer class="rodape">
+    <p>&copy; 2025 ONG Amigos de Patas</p>
   </footer>
-
-  <script src="js/app.js"></script>
 </body>
 </html>
