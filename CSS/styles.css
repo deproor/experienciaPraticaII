@@ -1,6 +1,4 @@
-/* Sistema de design com nomes humanizados */
 :root {
-  /* Cores principais e neutras */
   --cor-principal: #1565C0;
   --cor-principal-escura: #0E4C92;
   --cor-secundaria: #9C27B0;
@@ -13,12 +11,10 @@
   --neutro-100: #EEF1F5;
   --neutro-50:  #F7F9FC;
 
-  /* Feedback */
   --sucesso: #22C55E;
   --aviso:   #F59E0B;
   --erro:    #EF4444;
 
-  /* Tipografia */
   --fonte-base: "Inter", Arial, sans-serif;
   --tamanho-hero: 2.5rem;
   --tamanho-grande: 2rem;
@@ -26,7 +22,6 @@
   --tamanho-lead: 1.25rem;
   --tamanho-corpo: 1rem;
 
-  /* Espaçamentos (módulo 8px) */
   --espaco-pequeno: 8px;
   --espaco-medio: 16px;
   --espaco-24: 24px;
@@ -34,14 +29,11 @@
   --espaco-48: 48px;
   --espaco-64: 64px;
 
-  /* Forma */
   --raio: 8px;
 
-  /* Container */
   --largura-container: 1200px;
 }
 
-/* Base */
 * { box-sizing: border-box; }
 body {
   margin: 0;
@@ -54,7 +46,6 @@ img { max-width: 100%; border-radius: var(--raio); }
 a { color: var(--cor-principal); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* Container e grid simples (12 colunas) */
 .container {
   max-width: var(--largura-container);
   margin: 0 auto;
@@ -69,7 +60,6 @@ a:hover { text-decoration: underline; }
 .conteudo-destaque { grid-column: span 7; }
 .imagem-destaque  { grid-column: span 5; }
 
-/* Cabeçalho e navegação */
 .cabecalho {
   background: #fff;
   border-bottom: 1px solid var(--neutro-200);
@@ -95,7 +85,6 @@ a:hover { text-decoration: underline; }
 }
 .menu-principal a:hover { background: var(--neutro-100); }
 
-/* Submenu por hover */
 .menu-item-com-submenu { position: relative; }
 .submenu {
   display: none;
@@ -111,7 +100,7 @@ a:hover { text-decoration: underline; }
 .submenu a { display: block; padding: 6px 8px; border-radius: 6px; }
 .submenu a:hover { background: var(--neutro-100); }
 
-/* Rodapé */
+
 .rodape {
   background: var(--neutro-100);
   text-align: center;
@@ -120,13 +109,11 @@ a:hover { text-decoration: underline; }
   color: var(--neutro-700);
 }
 
-/* Seções e hero */
 .secao { padding: var(--espaco-grande) 0; }
 .destaque { padding: var(--espaco-48) 0; }
 .titulo-secao { font-size: var(--tamanho-hero); margin: 0 0 var(--espaco-medio); }
 .texto-secao { font-size: var(--tamanho-lead); color: var(--neutro-700); }
 
-/* Etiquetas (badges) */
 .lista-etiquetas { display: flex; flex-wrap: wrap; gap: 6px; }
 .etiqueta {
   display: inline-block;
@@ -141,7 +128,6 @@ a:hover { text-decoration: underline; }
 .etiqueta-aviso    { background: #FFF4DB; color: #8A5700; }
 .etiqueta-erro     { background: #FDE7E7; color: #7A1A1A; }
 
-/* Cards de projetos */
 .lista-cartoes {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -156,7 +142,6 @@ a:hover { text-decoration: underline; }
 }
 .titulo-cartao { font-size: var(--tamanho-medio); margin: 0 0 var(--espaco-pequeno); }
 
-/* Botões */
 .botao {
   display: inline-block;
   padding: var(--espaco-pequeno) var(--espaco-medio);
@@ -170,7 +155,6 @@ a:hover { text-decoration: underline; }
 .botao-secundario:hover { background: var(--cor-secundaria-escura); }
 .botao-outline { border: 1px solid var(--neutro-200); background: transparent; color: var(--neutro-900); }
 
-/* Formulários */
 .formulario { display: grid; gap: var(--espaco-medio); }
 fieldset { border: 1px solid var(--neutro-200); border-radius: var(--raio); padding: var(--espaco-24); }
 legend { font-weight: 700; font-size: var(--tamanho-lead); padding: 0 var(--espaco-pequeno); }
@@ -187,7 +171,6 @@ legend { font-weight: 700; font-size: var(--tamanho-lead); padding: 0 var(--espa
   outline: none;
 }
 
-/* Indicadores (KPIs) */
 .lista-indicadores {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -205,10 +188,8 @@ legend { font-weight: 700; font-size: var(--tamanho-lead); padding: 0 var(--espa
 .indicador-valor { font-size: var(--tamanho-medio); font-weight: 800; }
 .indicador-legenda { color: var(--neutro-700); }
 
-/* Ações de admin agrupadas */
 .acoes-admin { display: flex; gap: var(--espaco-medio); margin-top: var(--espaco-medio); }
 
-/* Responsividade (5 breakpoints) */
 @media (max-width: 1024px) {
   .cartao { grid-column: span 6; }
 }
